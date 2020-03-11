@@ -1,6 +1,6 @@
 <template>
-  <div class="about">
-    about
+  <div class="tag">
+    tags
   </div>
 </template>
 
