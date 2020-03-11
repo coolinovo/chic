@@ -2,7 +2,7 @@
   <header>
     <div class="container">
       <div class="sitename">
-        <a href="javascript:void(0)">Coolin's Site</a>
+        <router-link :to="{path: '/'}">Coolin's Site</router-link>
       </div>
       <div class="right">
         <div class="nav-bar">
@@ -48,7 +48,7 @@ export default {
   },
   methods: {
     change() {
-      
+
     }
   }
 };
@@ -70,6 +70,7 @@ header {
 
     .sitename {
       font-size: 1.125rem;
+      letter-spacing: .0625rem;
     }
 
     .right {
@@ -83,6 +84,7 @@ header {
         display: flex;
         justify-content: space-around;
         align-items: center;
+        letter-spacing: .0625rem;
       }
 
       .nav-tool {

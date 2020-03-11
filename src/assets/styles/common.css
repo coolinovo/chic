@@ -5,6 +5,15 @@ body,
   height: 100%;
   /* background-color: #292a2d;
   color: whitesmoke; */
+  box-sizing: border-box;
+}
+
+.home,
+.post,
+.category,
+.tag,
+.about {
+  flex-grow: 1;
 }
 
 a {
