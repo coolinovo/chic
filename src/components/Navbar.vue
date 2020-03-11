@@ -46,9 +46,35 @@ export default {
       bgColor: false
     };
   },
+  mounted() {
+    this.theme()
+    this.change()
+  },
   methods: {
+    theme() {
+      const bgColor = localStorage.getItem('theme')
+      console.log(bgColor)
+      if (bgColor === 'true') {
+        this.bgColor = true
+      }
+    },
     change() {
-
+      localStorage.setItem('theme', this.bgColor)
+      const body = document.getElementsByTagName('body')[0]
+      const a = document.getElementsByTagName('a')
+      if (this.bgColor) {
+        body.style.backgroundColor = '#292a2d'
+        body.style.color = '#a9a9b3'
+        a.forEach(i => {
+          i.style.color = '#a9a9b3'
+        })
+      } else {
+        body.style.backgroundColor = ''
+        body.style.color = ''
+        a.forEach(i => {
+          i.style.color = ''
+        })
+      }
     }
   }
 };

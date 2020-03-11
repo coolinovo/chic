@@ -6,6 +6,7 @@ body,
   /* background-color: #292a2d;
   color: whitesmoke; */
   box-sizing: border-box;
+  transition: background 0.35s;
 }
 
 .home,

@@ -1,6 +1,8 @@
 <template>
   <div class="category">
-    categories
+    <div>
+      <h3>- Categories -</h3>
+    </div>
   </div>
 </template>
 

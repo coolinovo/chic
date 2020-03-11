@@ -1,6 +1,6 @@
 <template>
-  <vueScroll>
-    <div class="post">
+  <!-- <vueScroll> -->
+  <div class="post">
     <div class="archives" v-for="item in archives" :key="item.id">
       <h3>{{ item.sequence }}</h3>
       <div class="archives-item" v-for="content in item.content" :key="content._id">
@@ -9,7 +9,7 @@
       </div>
     </div>
   </div>
-  </vueScroll>
+  <!-- </vueScroll> -->
 </template>
 
 <script>
@@ -18,77 +18,92 @@ export default {
     return {
       archives: [
         {
-          sequence: '2019',
+          sequence: "2019",
           content: [
-            { _id: '123', name: 'MathJax Test', create: 'July 5, 2019' },
-            { _id: '456', name: 'Hello World', create: 'July 11, 2019' },
-            { _id: '789', name: '中文测试', create: 'July 5, 2019' },
-            { _id: '000', name: 'Markdown Test', create: 'July 5, 2019' },
+            { _id: "123", name: "MathJax Test", create: "July 5, 2019" },
+            { _id: "456", name: "Hello World", create: "July 11, 2019" },
+            { _id: "789", name: "中文测试", create: "July 5, 2019" },
+            { _id: "000", name: "Markdown Test", create: "July 5, 2019" }
           ]
         },
         {
-          sequence: '2018',
+          sequence: "2018",
           content: [
-            { _id: '123', name: 'MathJax Test', create: 'July 5, 2019' },
-            { _id: '456', name: 'Hello World', create: 'July 11, 2019' },
-            { _id: '789', name: '中文测试', create: 'July 5, 2019' },
-            { _id: '000', name: 'Markdown Test', create: 'July 5, 2019' },
+            { _id: "123", name: "MathJax Test", create: "July 5, 2019" },
+            { _id: "456", name: "Hello World", create: "July 11, 2019" },
+            { _id: "789", name: "中文测试", create: "July 5, 2019" },
+            { _id: "000", name: "Markdown Test", create: "July 5, 2019" }
           ]
         },
         {
-          sequence: '2017',
+          sequence: "2017",
           content: [
-            { _id: '123', name: 'MathJax Test', create: 'July 5, 2019' },
-            { _id: '456', name: 'Hello World', create: 'July 11, 2019' },
-            { _id: '789', name: '中文测试', create: 'July 5, 2019' },
-            { _id: '000', name: 'Markdown Test', create: 'July 5, 2019' },
+            { _id: "123", name: "MathJax Test", create: "July 5, 2019" },
+            { _id: "456", name: "Hello World", create: "July 11, 2019" },
+            { _id: "789", name: "中文测试", create: "July 5, 2019" },
+            { _id: "000", name: "Markdown Test", create: "July 5, 2019" }
           ]
         },
         {
-          sequence: '2018',
+          sequence: "2018",
           content: [
-            { _id: '123', name: 'MathJax Test', create: 'July 5, 2019' },
-            { _id: '456', name: 'Hello World', create: 'July 11, 2019' },
-            { _id: '789', name: '中文测试', create: 'July 5, 2019' },
-            { _id: '000', name: 'Markdown Test', create: 'July 5, 2019' },
+            { _id: "123", name: "MathJax Test", create: "July 5, 2019" },
+            { _id: "456", name: "Hello World", create: "July 11, 2019" },
+            { _id: "789", name: "中文测试", create: "July 5, 2019" },
+            { _id: "000", name: "Markdown Test", create: "July 5, 2019" }
           ]
         }
       ]
-    }
+    };
   }
-}
+};
 </script>
 
 <style lang="less" scoped>
-  .post {
-    width: 100%;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    // overflow-y: scroll;
+.post {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
 
-    .archives {
-      width: 40%;
-      margin-top: 2.5rem;
+  .archives {
+    width: 40%;
+    margin-top: 2.5rem;
 
-      h3 {
-        margin: 0.625rem 0;
-        font-size: 1.375rem;
-      }
+    h3 {
+      margin: 0.625rem 0;
+      font-size: 1.375rem;
+    }
 
-      .archives-item {
-        margin-left: 1.25rem;
-        font-size: .9375rem;
-        letter-spacing: .0625rem;
-        display: flex;
-        justify-content: space-between;
-        padding: .5rem 0;
+    .archives-item {
+      margin-left: 1.25rem;
+      font-size: 0.9375rem;
+      letter-spacing: 0.0625rem;
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
 
-        span {
-          color: #515a6e78;
-        }
+      span {
+        color: #515a6e78;
       }
     }
   }
+}
+.post::-webkit-scrollbar {
+  width: 5px;
+}
+.post::-webkit-scrollbar-track {
+  background-color: transparent;
+  -webkit-border-radius: .125rem;
+  -moz-border-radius: .125rem;
+  border-radius: .125rem;
+}
+.post::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  -webkit-border-radius: .125rem;
+  -moz-border-radius: .125rem;
+  border-radius: .125rem;
+}
 </style>
